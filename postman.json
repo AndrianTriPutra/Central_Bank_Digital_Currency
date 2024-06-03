@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "79a26763-9b68-47f1-8367-4e31cd7b64b0",
+		"name": "cbdc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7573736"
+	},
+	"item": [
+		{
+			"name": "transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"from\" : \"Bank Central\",\n    \"to\":\"Bank B\",\n    \"amount\": 10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8008/atp/cbdc/transaction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8008",
+					"path": [
+						"atp",
+						"cbdc",
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "wallet",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8008/atp/cbdc/wallet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8008",
+					"path": [
+						"atp",
+						"cbdc",
+						"wallet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "balance",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "address",
+							"value": "Bank Central",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8008/atp/cbdc/balance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8008",
+					"path": [
+						"atp",
+						"cbdc",
+						"balance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "history",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "address",
+							"value": "Bank Central",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8008/atp/cbdc/history",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8008",
+					"path": [
+						"atp",
+						"cbdc",
+						"history"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "chain",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8008/atp/cbdc/chain",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8008",
+					"path": [
+						"atp",
+						"cbdc",
+						"chain"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
